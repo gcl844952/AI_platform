@@ -1,0 +1,45 @@
+<view class="container">
+  <view class="wrapper">
+    <view class="input-content">
+
+      <view class="input-item">
+        <text class="tit">姓名</text>
+        <input  type="text" placeholder="请输入姓名" id="name" bindinput="handleInput"/>
+      </view>
+
+      <view class="input-item">
+        <text class="tit">性别</text>
+        <view>
+          <picker
+          bindchange="bindPickerChange" 
+          value="{{index}}" 
+          range="{{sex}}"
+          >
+            <view class="tit" id="selectSex">{{sex[index]}}</view>
+          </picker>
+        </view>
+      </view>
+
+      <view class="input-item">
+        <text class="tit">手机号码</text>
+        <input type="text"  placeholder="请输入手机号码" id="phone" bindinput="handleInput"/>
+      </view>
+
+      <view class="input-item">
+        <text class="tit">身份证号码</text>
+        <input type="text"  placeholder="请输入身份证号码" id="IDcard" bindinput="handleInput"/>
+      </view>
+
+      <view class="input-item">
+        <text class="tit">邮箱</text>
+        <input type="text"  placeholder="请输入邮箱账号" id="email" bindinput="handleInput"/>
+      </view>
+      
+      <view class="input-item">
+        <text class="tit">登录密码</text>
+        <input type="password"  placeholder="请输入密码" id="password" bindinput="handleInput"/>
+      </view>
+    </view>
+    <button class="confirm-btn" bindtap="register">注册</button>
+  </view>
+</view>
